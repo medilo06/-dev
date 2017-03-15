@@ -30,19 +30,20 @@ Comparing the output: Relevant fields from /proc/meminfo to match them against t
 
 Matching output of free -k to /proc/meminfo
 
+
 The following table shows how to get the free output matched to the /proc/meminfo fields.
 #####################################################################################################################
-# free output						                                     #	coresponding /proc/meminfo fields                   #
+# free output						    #	coresponding /proc/meminfo fields                   #
 #####################################################################################################################
-# Mem: total						                                     #	MemTotal                                            #
-# Mem: used						                                       #	MemTotal - MemFree                                  #
-# Mem: free						                                       #	MemFree                                             #
-# Mem: shared (can be ignored nowadays. It has no meaning.)  #	N/A                                                 #
-# Mem: buffers						                                   #	Buffers                                             #
-# Mem: cached	                                               #   Cached                                             #
-# -/+ buffers/cache: used	                                   #   MemTotal - (MemFree + Buffers + Cached)            #
-# -/+ buffers/cache: free	                                   #   MemFree + Buffers + Cached                         #
-# Swap: total	                                               #   SwapTotal                                          #
-# Swap: used	                                               #   SwapTotal - SwapFree                               #
-# Swap: free	                                               #   SwapFree                                           #
+# Mem: total						    #	MemTotal                                            #
+# Mem: used						    #	MemTotal - MemFree                                  #
+# Mem: free						    #	MemFree                                             #
+# Mem: shared (can be ignored nowadays. It has no meaning.) #	N/A                                                 #
+# Mem: buffers						    #	Buffers                                             #
+# Mem: cached	                                            #   Cached                                              #
+# -/+ buffers/cache: used	                            #   MemTotal - (MemFree + Buffers + Cached)             #
+# -/+ buffers/cache: free	                            #   MemFree + Buffers + Cached                          #
+# Swap: total	                                            #   SwapTotal                                           #
+# Swap: used	                                            #   SwapTotal - SwapFree                                #
+# Swap: free	                                            #   SwapFree                                            #
 #####################################################################################################################
