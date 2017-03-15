@@ -1,5 +1,6 @@
 Important Folders: 
-scripts\
-config\
-logs\
+
+* scripts
+* config
+* logs
 
