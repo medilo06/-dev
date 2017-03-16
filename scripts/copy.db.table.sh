@@ -2,8 +2,6 @@
 
 PROGNAME=`basename $0`
 VERSION="Version 0.1,"
-AUTHOR="2015, John Ian Medilo"
-HISTORY="20150612: modify for best"
 
 CREDENTIALS="/srv/www/tmp/.credentials.yml" 
 
