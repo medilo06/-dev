@@ -1,0 +1,24 @@
+cat ~/.ssh/config
+Host server1
+        Hostname        192.168.0.10
+        Port            22
+        User            me
+
+Host server1
+        Hostname        192.168.0.11
+        Port            22
+        User            you
+        ProxyCommand ssh -A bastion nc %h %p
+
+Host bastion
+     Hostname 192.168.0.8
+     User me
+     Port 22
+
+cat ~/.ssh/known_hosts
+[192.168.0.10]:22 ecdsa-sha2-nistp256 AAAAE2VxXXXxXXXxXXXxxxxxxXXxXXXXXXXXxxxxxXXxXXXXXXXXXXxXXxXXXx0Xx0XXxx0XX0xO/xx/XXXX0xX0xxXXxxXxXxXXXXxxXx0XXxxx0XxXxx0xxxXxxx0xX0Xxx0000x0=
+192.1688.0.11 ecdsa-sha2-nistp256 AAAAE2VxXXXxXXXxXXXxxxxxxXXxXXXXXXXXxxxxxXXxXXXXXXXXXXxXXxXXXx0Xx0XXxx0XX0xO/xx/XXXX0xX0xxXXxxXxXxXXXXxxXx0XXxxx0XxXxx0xxxXxxx0xX0Xxx0000x0=
+
+COMMANDS:
+scp -o proxycommand=ssh server1 nc %h %p /myfolder/file.txt server2:/destination/folder/file
+ssh -o ProxyCommand="ssh -W %h:%p server1" server2 ls
